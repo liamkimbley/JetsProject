@@ -73,7 +73,7 @@ public class JetsApplication {
 		System.out.println("Welcome to the Airfield!");
 		System.out.println("Here is a list of options.");
 		System.out.println("1. List Fleet");
-		System.out.println("2. Fly All Jets");
+		System.out.println("2. Launch All Jets");
 		System.out.println("3. View Fastest Jet");
 		System.out.println("4. View Jet With Longest Range");
 		System.out.println("5. Load Passenger Planes");
