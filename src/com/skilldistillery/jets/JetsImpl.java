@@ -18,7 +18,7 @@ public class JetsImpl extends Jet {
 		System.out.print("What is the price of the jet: ");
 		double price = sc.nextDouble();
 		this.setPrice((long)price);
-		
+		this.setHours(range/speed);
 	}
 
 	public JetsImpl(String model, double speed, int range, long price) {

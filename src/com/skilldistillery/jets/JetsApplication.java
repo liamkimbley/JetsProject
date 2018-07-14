@@ -21,10 +21,9 @@ public class JetsApplication {
 		jets[4] = b747;
 		
 		Airfield af = new Airfield(jets);
-		
-		
 		Scanner sc = new Scanner(System.in);
 		String input;
+		
 		do {
 			displayUserMenu();
 			input = sc.nextLine();
@@ -56,12 +55,12 @@ public class JetsApplication {
 					}
 				}
 				break;
+			case "8":
+				System.out.println("Before the planes are able to take off, a missle comes in and destroys the entire airport.");
+				System.out.println("Please wait while the airport is rebuilt...\n\t...\n\t\t...");
 			}
-			
-			
-		} while ( !(input.equalsIgnoreCase("quit") || (input.equals("8"))));
+		} while ( !(input.equalsIgnoreCase("quit") || (input.equals("9"))));
 
-		
 		System.out.println("Goodbye.");
 		sc.close();
 	}
@@ -80,7 +79,8 @@ public class JetsApplication {
 		System.out.println("5. Load Passenger Planes");
 		System.out.println("6. Load Cargo Planes");
 		System.out.println("7. Add Jet to Fleet");
-		System.out.println("8. Quit");
+		System.out.println("8. Dogfight!");
+		System.out.println("9. Quit");
 		System.out.print("Please enter an option: ");
 	}
 	

@@ -7,6 +7,14 @@ public abstract class Jet {
 	long price = (long) 0.0;
 	double hours;
 	
+	public double getHours() {
+		return hours;
+	}
+
+	public void setHours(double hours) {
+		this.hours = hours;
+	}
+
 	public Jet() {
 	
 	}
@@ -58,7 +66,7 @@ public abstract class Jet {
 	@Override
 	public String toString() {
 		return "Jet Name: " + model + "\nSpeed: " + speed + "MPH\nRange: " + range + " miles\nPrice: $" + price 
-				+ "\nHours of Flight: " + hours;
+				+ "\nHours of Flight: " + this.hours;
 	}
 
 	void fly() {

@@ -21,8 +21,10 @@ public class Airfield {
 			if (jets[i] == null) {
 				break;
 			}
-			System.out.println("Jet " + (i + 1) + ": " + jets[i].model);
+			System.out.println("Jet " + (i + 1) + ": " + jets[i].model + ", Speed: " + jets[i].speed + "MPH, Range: " 
+					+ jets[i].range + " miles, Price: $" + jets[i].price);
 		}
+		System.out.println();
 	}
 	
 	public void launchAllJets() {
@@ -45,6 +47,7 @@ public class Airfield {
 			}
 		}
 		System.out.println(tempJet);
+		System.out.println();
 	}
 	public void displayLongestRange() {
 		Jet tempJet = jets[0];
@@ -57,5 +60,6 @@ public class Airfield {
 			}
 		}
 		System.out.println(tempJet);
+		System.out.println();
 	}
 }
