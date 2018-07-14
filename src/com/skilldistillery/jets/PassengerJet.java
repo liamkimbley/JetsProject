@@ -8,6 +8,6 @@ public class PassengerJet extends Jet implements Passenger {
 
 	@Override
 	public void loadPassengers() {
-		System.out.println("Loading Passengers...\n...\nAll Passengers Loaded.\n");
+		System.out.println("Loading Passengers...\n...\nAll Passengers Loaded.");
 	}
 }

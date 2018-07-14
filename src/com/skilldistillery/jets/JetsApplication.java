@@ -42,9 +42,12 @@ public class JetsApplication {
 				break;
 			case "5":
 				((PassengerJet) b747).loadPassengers();
+				((CargoCarrier) airbus).loadCargo();
 				break;
 			case "6":
-				((CargoCarrier) airbus).loadCargo();
+				((FighterJet) f22).fight();
+				((FighterJet) f16).fight();
+				((FighterJet) mig29).fight();
 				break;
 			case "7":
 				Jet ji = new JetsImpl();
@@ -57,7 +60,8 @@ public class JetsApplication {
 				break;
 			case "8":
 				System.out.println("Before the planes are able to take off, a missle comes in and destroys the entire airport.");
-				System.out.println("Please wait while the airport is rebuilt...\n\t...\n\t\t...");
+				System.out.println("Please wait while the airport is rebuilt...\n\t...\n...\t\t...\n\t...");
+				break;
 			}
 		} while ( !(input.equalsIgnoreCase("quit") || (input.equals("9"))));
 
@@ -76,8 +80,8 @@ public class JetsApplication {
 		System.out.println("2. Launch All Jets");
 		System.out.println("3. View Fastest Jet");
 		System.out.println("4. View Jet With Longest Range");
-		System.out.println("5. Load Passenger Planes");
-		System.out.println("6. Load Cargo Planes");
+		System.out.println("5. Load Passenger and Cargo Planes");
+		System.out.println("6. Send Fighter Jets Out");
 		System.out.println("7. Add Jet to Fleet");
 		System.out.println("8. Dogfight!");
 		System.out.println("9. Quit");
