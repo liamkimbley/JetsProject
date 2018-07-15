@@ -11,11 +11,6 @@ public class JetsApplication {
 		displayUserMenu();
 	}
 
-	
-	public JetsApplication() {
-
-	}
-
 	public static void displayUserMenu() {
 		Jet[] jets = new Jet[15];
 		Jet f22 = new FighterJet("F22", 1500, 1600, 150000000);
@@ -65,6 +60,10 @@ public class JetsApplication {
 				((CargoCarrier) airbus).loadCargo();
 				break;
 			case "6":
+//				for (int i = 0; i < jets.length; i++) {
+//					if(jets[i].getClass().("Passenger")) {
+//					}
+//				}
 				((FighterJet) f22).fight();
 				((FighterJet) f16).fight();
 				((FighterJet) mig29).fight();
@@ -94,7 +93,6 @@ public class JetsApplication {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Would you like to add a Fighter, Passenger, or Cargo Jet: ");
 		String newJet = sc.nextLine();
-
 		System.out.print("To enter a new jet, please begin by entering the name: ");
 		String model = sc.nextLine();
 		System.out.print("How fast does this jet fly in MPH: ");
@@ -132,5 +130,9 @@ public class JetsApplication {
 			}
 		}
 		return jetList;
+	}
+	
+	public JetsApplication() {
+		
 	}
 }
