@@ -31,7 +31,7 @@ public class JetsApplication {
 			System.out.println("Welcome to the Airfield!");
 			System.out.println("Here is a list of options.");
 			System.out.println("1. List Fleet");
-			System.out.println("2. Launch All Jets");
+			System.out.println("2. Launch Jets");
 			System.out.println("3. View Fastest Jet");
 			System.out.println("4. View Jet With Longest Range");
 			System.out.println("5. Load Passenger and Cargo Planes");
@@ -45,10 +45,22 @@ public class JetsApplication {
 			switch (input) {
 			case "1":
 				af.listFleet();
+				System.out.println();
 				break;
 			case "2":
-				af.launchAllJets();
+				af.listFleet();
+				System.out.println("Or, Launch All Jets (ALL)");
+				System.out.print("Which Jet would you like to launch? :");
+				String next = sc.nextLine();
+				if (next.equalsIgnoreCase("all")) {
+					af.launchAllJets();
+					break;
+				}
+				else {
+				int j = Integer.parseInt(next);
+				af.launchJet(j);
 				break;
+				}
 			case "3":
 				System.out.println("Fastest Jet:");
 				af.displayFastestJet();

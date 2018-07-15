@@ -24,7 +24,6 @@ public class Airfield {
 			System.out.println("Jet " + (i + 1) + ": " + jets[i].model + ", Speed: " + jets[i].speed + "MPH, Range: " 
 					+ jets[i].range + " miles, Price: $" + jets[i].price);
 		}
-		System.out.println();
 	}
 	
 	public void launchAllJets() {
@@ -34,6 +33,10 @@ public class Airfield {
 			}
 			jets[i].fly();
 		}
+	}
+	
+	public void launchJet(int i) {
+			jets[i-1].fly();
 	}
 	
 	public void displayFastestJet() {
