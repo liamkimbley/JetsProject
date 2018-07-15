@@ -50,23 +50,30 @@ public class JetsApplication {
 				af.launchAllJets();
 				break;
 			case "3":
+				System.out.println("Fastest Jet:");
 				af.displayFastestJet();
 				break;
 			case "4":
+				System.out.println("Jet With Longest Range:");
 				af.displayLongestRange();
 				break;
 			case "5":
-				((PassengerJet) b747).loadPassengers();
-				((CargoCarrier) airbus).loadCargo();
+				for (int i = 0; i < jets.length; i++) {
+					if(jets[i] instanceof PassengerJet) {
+						((PassengerJet) jets[i]).loadPassengers();
+					}
+					if(jets[i] instanceof CargoPlane) {
+						((CargoCarrier) jets[i]).loadCargo();
+					}
+				}
+				System.out.println();
 				break;
 			case "6":
-//				for (int i = 0; i < jets.length; i++) {
-//					if(jets[i].getClass().("Passenger")) {
-//					}
-//				}
-				((FighterJet) f22).fight();
-				((FighterJet) f16).fight();
-				((FighterJet) mig29).fight();
+				for (int i = 0; i < jets.length; i++) {
+					if(jets[i] instanceof FighterJet) {
+						((FighterJet) jets[i]).fight();
+					}
+				}
 				System.out.println();
 				break;
 			case "7":
@@ -105,7 +112,7 @@ public class JetsApplication {
 		int range1 = (int) range;
 
 		if (newJet.equalsIgnoreCase("fighter")) {
-			JetsImpl fj = new JetsImpl(model, speed, range1, price1);
+			FighterJet fj = new FighterJet(model, speed, range1, price1);
 			return fj;
 		}
 		else if (newJet.equalsIgnoreCase("passenger")) {
