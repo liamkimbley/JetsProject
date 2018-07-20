@@ -18,3 +18,4 @@ This project is designed to simulate an airfield. Each jet will have different p
 * Getters/Setters
 * This.
 * @Override
+* instanceof
