@@ -19,3 +19,7 @@ This project is designed to simulate an airfield. Each jet will have different p
 * This.
 * @Override
 * instanceof
+
+### Stretch Goals Met
+* User can fly an individual Jet, as well as launch all Jets 
+* User can add different types of Jets to the Airfield
